@@ -1,26 +1,24 @@
 package io.jeongjaeeom.iloveyouboss.basic.ex01;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 public class ScoreCollectionTest {
 
-  @Before
-  public void setUp() throws Exception {
-  }
-
-  @After
-  public void tearDown() throws Exception {
-  }
-
-  @Test
-  public void add() {
-  }
-
   @Test
   public void arithmeticMean() {
+    // 준비
+    ScoreCollection collection = new ScoreCollection();
+    collection.add(() -> 5);
+    collection.add(() -> 7);
+
+    // 실행
+    int actualResult = collection.arithmeticMean();
+
+    // 단언
+    assertThat(actualResult, equalTo(6));
+
   }
 }
