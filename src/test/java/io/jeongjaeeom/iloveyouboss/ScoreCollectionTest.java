@@ -1,7 +1,7 @@
-package io.jeongjaeeom.iloveyouboss.basic.ex01;
+package io.jeongjaeeom.iloveyouboss;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
